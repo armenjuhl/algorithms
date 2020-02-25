@@ -41,7 +41,7 @@ def sumOfHourglass(arr, vertC, horC):
 def sumOf3(arr, horIdx=0):
     return arr[horIdx] + arr[horIdx+1] + arr[horIdx+2]
 
-def sumOf1(arr, horIdx):
+def sumOf1(arr, horIdx=0):
     return arr[horIdx+1]
     
 
