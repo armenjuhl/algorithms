@@ -1,0 +1,61 @@
+# Written by Armen Juhl 2/24/2020
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the hourglassSum function below.
+def hourglassSum(arr):
+    column = [0,1,2,3]
+    row =  [0,1,2,3]
+    totalSum = list()
+
+    totalSum.append(sumOfHourglass(arr, column[0], row[0]))
+    totalSum.append(sumOfHourglass(arr, column[0], row[1]))
+    totalSum.append(sumOfHourglass(arr, column[0], row[2]))
+    totalSum.append(sumOfHourglass(arr, column[0], row[3]))
+    totalSum.append(sumOfHourglass(arr, column[1], row[0]))
+    totalSum.append(sumOfHourglass(arr, column[1], row[1]))
+    totalSum.append(sumOfHourglass(arr, column[1], row[2]))
+    totalSum.append(sumOfHourglass(arr, column[1], row[3]))
+    totalSum.append(sumOfHourglass(arr, column[2], row[0]))
+    totalSum.append(sumOfHourglass(arr, column[2], row[1]))
+    totalSum.append(sumOfHourglass(arr, column[2], row[2]))
+    totalSum.append(sumOfHourglass(arr, column[2], row[3]))
+    totalSum.append(sumOfHourglass(arr, column[3], row[0]))
+    totalSum.append(sumOfHourglass(arr, column[3], row[1]))
+    totalSum.append(sumOfHourglass(arr, column[3], row[2]))
+    totalSum.append(sumOfHourglass(arr, column[3], row[3]))
+    return max(totalSum)
+
+
+def sumOfHourglass(arr, vertC, horC):
+    totalSum = sumOf3(arr[vertC], horC)
+    totalSum += sumOf1(arr[vertC+1], horC)
+    totalSum += sumOf3(arr[vertC+2], horC)
+    return totalSum
+
+def sumOf3(arr, horIdx=0):
+    return arr[horIdx] + arr[horIdx+1] + arr[horIdx+2]
+
+def sumOf1(arr, horIdx):
+    return arr[horIdx+1]
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    arr = []
+
+    for _ in range(6):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = hourglassSum(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
