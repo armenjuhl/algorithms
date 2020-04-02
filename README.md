@@ -1,7 +1,7 @@
 # sumOf2DHourGlassArrays
 
 
-This project is my solution to a challenge which was to write a program that takes an input of a 6X6 2 dimensional array and give the set containing the highest sum of all digits that could be added together in an hourglass shape. An example of this array is below:
+This project is my solution to a challenge which was to write a program that takes an input of a 6X6 2 dimensional array and give the set containing the highest sum of all digits that could be added together in an hourglass shape. An example of this array is below:<br/>
 101010<br/>
 101010<br/>
 101010<br/>
@@ -9,15 +9,15 @@ This project is my solution to a challenge which was to write a program that tak
 101010<br/>
 101010<br/>
 
-The hourglass shape is as so:
-abc
- d
-efg
+The hourglass shape is as so:<br/>
+abc<br/>
+&nbsp;d<br/>
+efg<br/>
 
-Going through the array from left to right we will find this first hourglass shape:
-101
-  0
-101
+Going through the array from left to right we will find this first hourglass shape:<br/>
+101<br/>
+&nbsp;0<br/>
+101<br/>
 The sum of this first set equals 4.
 
 Notice that within the 2D array there are 4 iterations of hourglass shapes that can be found when traversing from left to right and 12 more iterations when following the same algorithm from top to bottom. This will give a total of 16 hourglass shapes that can be found.
