@@ -2,12 +2,12 @@
 
 
 This project is my solution to a challenge which was to write a program that takes an input of a 6X6 2 dimensional array and give the set containing the highest sum of all digits that could be added together in an hourglass shape. An example of this array is below:
-101010
-101010
-101010
-101010
-101010
-101010
+101010<br/>
+101010<br/>
+101010<br/>
+101010<br/>
+101010<br/>
+101010<br/>
 
 The hourglass shape is as so:
 abc
