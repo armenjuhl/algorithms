@@ -7,7 +7,7 @@ import random
 import re
 import sys
 
-# Complete the hourglassSum function below.
+
 def hourglassSum(arr):
     column = [0,1,2,3]
     row =  [0,1,2,3]
